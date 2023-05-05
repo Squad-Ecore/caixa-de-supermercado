@@ -29,8 +29,9 @@ public class CartaoCredito extends Recibo implements FormaDePagamento {
 
         ArrayList<Produto> listaDeProdutos = (ArrayList<Produto>) Carrinho.getListaProdutos();
         String listaProdutosComprado = "";
+
         for (Produto produto : listaDeProdutos) {
-            super.valorTotal = produto.getQuantidadePorProdutoNoCarrinho() * produto.getPreco();
+            super.valorTotal += produto.getQuantidadePorProdutoNoCarrinho() * produto.getPreco();
             listaProdutosComprado += produto.getQuantidadePorProdutoNoCarrinho() + " " + produto.getNome() + " - R$ " + produto.getPreco() + " cada\n";
             this.listaProdutosComprado = listaProdutosComprado;
         }
@@ -48,24 +49,18 @@ public class CartaoCredito extends Recibo implements FormaDePagamento {
 
     @Override
     public boolean verificaPagamento() {
-        if (realizaPagamento()) {
-            System.out.println("Pagamento por cartão aprovado!!!!!!!!!!!!!!!");
-            return true;
-        }
-        return false;
+        System.out.println("Pagamento por cartão aprovado!!!!!!!!!!!!!!!");
+        return true;
     }
 
     @Override
     public String geraRecibo(Carrinho carrinho) {
         String retorno =
                 "\n\n\n##############################\n\nRECIBO DE PAGAMENTO\nSupermercado " +
-                        DadosSupermercado.getNomeSupermercado() + "\nCNPJ: " + DadosSupermercado.getCnpj() + "\n\nLista de produtos Vendidos\n";
-        setDataHora(new Date());
+                        DadosSupermercado.getNomeSupermercado() + "\nCNPJ: " + DadosSupermercado.getCnpj() + "\n\nLista de Compras\n";
 
-        ArrayList<Produto> listaDeProdutos = (ArrayList<Produto>) carrinho.getListaProdutos();
-        for (Produto produto : listaDeProdutos) {
-            retorno += listaProdutosComprado;
-        }
+        setDataHora(new Date());
+        retorno += listaProdutosComprado;
         setDataHora(new Date());
         retorno += "\nCartão de Crédito - " + numeroDoCartao + "\nTitular: " + nomeDoTitular;
         retorno += "\nValor Total da Compra: R$ " + getValorTotal() + "\nData e Hora da Compra: " +
