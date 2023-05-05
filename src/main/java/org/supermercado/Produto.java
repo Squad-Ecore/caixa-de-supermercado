@@ -1,33 +1,24 @@
 package org.supermercado;
 
-import java.time.LocalDate;
-import java.util.Scanner;
-
 public class Produto {
 
+    protected int quantidadePorProdutoNoCarrinho;
     private int idProduto;
     private String codigoDeBarras;
     private String nome;
     private double preco;
-    private InformacoesAdicionais informacoesAdicionais;
+    private String dataDeValidade;
+    private int quantidadeEmEstoque;
     private static int total;
 
-    public Produto(String nome, String codigoDeBarras, double preco) {
+    public Produto(String nome, String codigoDeBarras, double preco, String dataDeValidade, int quantidadeEmEstoque) {
+        this.dataDeValidade = dataDeValidade;
+        this.quantidadeEmEstoque = quantidadeEmEstoque;
         this.nome = nome;
         this.codigoDeBarras = codigoDeBarras;
         this.preco = preco;
         Produto.total = getTotal() + 1;
         this.idProduto = Produto.total;
-    }
-
-    public InformacoesAdicionais setInformacoesProduto(String dataDeValidade, int quantidadeEmEstoque, String categoria) {
-        InformacoesAdicionais informacoesAdicionais1 = new InformacoesAdicionais();
-        informacoesAdicionais1.setCategoria(categoria);
-        informacoesAdicionais1.setDataDeValidade(dataDeValidade);
-        informacoesAdicionais1.setQuantidadeEmEstoque(quantidadeEmEstoque);
-        this.informacoesAdicionais = informacoesAdicionais1;
-        InformacoesAdicionais retorna = informacoesAdicionais1;
-        return retorna;
     }
 
     public double getPreco() {
@@ -56,6 +47,14 @@ public class Produto {
 
     public static int getTotal() {
         return total;
+    }
+
+    public int getQuantidadeEmEstoque() {
+        return quantidadeEmEstoque;
+    }
+
+    public void setQuantidadeEmEstoque(int quantidadeEmEstoque) {
+        this.quantidadeEmEstoque = quantidadeEmEstoque;
     }
 
     public int getIdProduto() {

@@ -7,16 +7,23 @@
     <list default="true" id="8739a885-7575-4b8c-92d0-fa87af72e530" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../byte_bank/byte_bank.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../bytebank/bytebank.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/Carrinho.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/Produto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/Caixa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/EstoqueDeProdutos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/FormaDePagamento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/GerenciadorDeEstoque.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/Recibo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/TransacoesDeVendas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/CartaoCredito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/CartaoDebito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/CartaoEspecialDaEmpresa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/Dinheiro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/Pix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/Carrinho.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/Carrinho.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/InformacoesAdicionais.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/Produto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
