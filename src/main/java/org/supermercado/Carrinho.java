@@ -1,9 +1,10 @@
 package org.supermercado;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Carrinho {
-    private ArrayList<Produto> listaProdutos = new ArrayList<>();
+    private static List<Produto> listaProdutos = new ArrayList<>();
 
     public void adiciona(Produto produto, int quantidadePorProduto) {
         this.listaProdutos.add(produto);
@@ -16,12 +17,15 @@ public class Carrinho {
         produto.setQuantidadeEmEstoque(produto.getQuantidadeEmEstoque() + quantidadePorProduto);
     }
 
-    public String getListaDeProdutos(){
+    public String getListaAtualDeProdutos(){
         String retorno = "Lista de Produtos No Carrinho\n";
         for (Produto produto : listaProdutos) {
-            retorno += produto.quantidadePorProdutoNoCarrinho + " " + produto.getNome() + " - " + produto.getPreco() + "\n";
+            retorno += produto.quantidadePorProdutoNoCarrinho + " " + produto.getNome() + " - R$ " + produto.getPreco() + " cada\n";
         }
         return retorno;
     }
 
+    public static List<Produto> getListaProdutos() {
+        return listaProdutos;
+    }
 }

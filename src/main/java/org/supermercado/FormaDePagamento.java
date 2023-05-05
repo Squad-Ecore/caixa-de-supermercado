@@ -2,8 +2,7 @@ package org.supermercado;
 
 public interface FormaDePagamento {
 
-    boolean realizaPagamento(double valor);
+    boolean realizaPagamento();
     boolean verificaPagamento();
-    Recibo fornecerRecibo();
 }
 

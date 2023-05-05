@@ -21,6 +21,10 @@ public class Produto {
         this.idProduto = Produto.total;
     }
 
+    public int getQuantidadePorProdutoNoCarrinho() {
+        return this.quantidadePorProdutoNoCarrinho;
+    }
+
     public double getPreco() {
         return preco;
     }
