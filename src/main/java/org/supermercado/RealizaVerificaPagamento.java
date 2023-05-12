@@ -10,8 +10,6 @@ public abstract class RealizaVerificaPagamento {
         return false;
     }
 
-
-
     public boolean verificaPagamento() {
         if (realizaPagamento())
             return true;

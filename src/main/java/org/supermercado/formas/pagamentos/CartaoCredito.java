@@ -1,8 +1,8 @@
 package org.supermercado.formas.pagamentos;
 
 import org.supermercado.Carrinho;
-import org.supermercado.Recibo;
 import org.supermercado.RealizaVerificaPagamento;
+import org.supermercado.Recibo;
 import org.supermercado.dadossupermercado.DadosSupermercado;
 
 import java.util.Date;

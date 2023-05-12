@@ -1,6 +1,6 @@
 package org.supermercado;
 
-public class Produto extends Object {
+public class Produto {
 
     protected int quantidadePorProdutoNoCarrinho;
     private int idProduto;
@@ -64,6 +64,15 @@ public class Produto extends Object {
     public int getQuantidadePorProdutoNoCarrinho() {
         return quantidadePorProdutoNoCarrinho;
     }
+
+    @Override
+    public boolean equals(Object referencia) {
+        Produto produto = (Produto) referencia;
+        if (this.getCodigoDeBarras() == produto.getCodigoDeBarras())
+            return true;
+        return false;
+    }
+    //depende da minha regra de negócio
 
     @Override
     public String toString() {

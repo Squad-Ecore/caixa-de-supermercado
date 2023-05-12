@@ -7,19 +7,11 @@
     <list default="true" id="8739a885-7575-4b8c-92d0-fa87af72e530" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../byte_bank/byte_bank.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../bytebank/bytebank.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/RealizaVerificaPagamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/Carrinho.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/Carrinho.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/EstoqueDeProdutos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/EstoqueDeProdutos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/FormaDePagamento.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/GerenciadorDeEstoque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/GerenciadorDeEstoque.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/Recibo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/Recibo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/RealizaVerificaPagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/RealizaVerificaPagamento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/CartaoCredito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/CartaoCredito.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/CartaoDebito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/CartaoDebito.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/CartaoEspecialDaEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/CartaoEspecialDaEmpresa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/Dinheiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/Dinheiro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/Pix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/supermercado/formas/pagamentos/Pix.java" afterDir="false" />
     </list>
@@ -52,19 +44,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/ruanp/Workspace/caixa-de-supermercado",
-    "onboarding.tips.debug.path": "C:/Users/ruanp/Projetos-Java/caixa-de-supermercado/src/main/java/org/digitalinnovation/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ruanp/Workspace/caixa-de-supermercado&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/ruanp/Projetos-Java/caixa-de-supermercado/src/main/java/org/digitalinnovation/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.supermercado.Main" />
@@ -109,5 +101,16 @@
       <updated>1682514181546</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/supermercado/Produto.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
