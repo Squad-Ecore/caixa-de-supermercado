@@ -51,8 +51,8 @@ public class Main {
 
         System.out.println(estoque.getProdutosEstocados());
 
-//        System.out.println(estoque.mostraOrdemAlfabetica());
-//        System.out.println(estoque.mostraPorPreco());
+        System.out.println(estoque.mostraOrdemAlfabetica());
+        System.out.println(estoque.mostraPorPreco());
 
 
 
