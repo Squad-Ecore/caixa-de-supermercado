@@ -8,30 +8,32 @@ public class EstoqueDeProdutos implements GerenciadorDeEstoque {
     private List<Produto> produtosEstocados = new ArrayList<>();
 
     @Override
-    public void adicionarProdutoAoEstoque(Produto produto) {
+    public void adicionaProdutoAoEstoque(Produto produto) {
         produtosEstocados.add(produto);
     }
 
     @Override
-    public void removerProdutoDoEstoque(Produto produto) {
+    public void removeProdutoDoEstoque(Produto produto) {
         produtosEstocados.remove(produto);
+
     }
 
     @Override
     public boolean verificaProdutoNoEstoque(Produto produto) {
-        for (Produto iterador : produtosEstocados) {
-            if (produto == iterador) {
-                return true;
-            }
-        }
-        return false;
+        return produtosEstocados.contains(produto);
     }
 
-    public String getProdutosEstocados() {
-        String retorno = "";
-        for (Produto produto : produtosEstocados) {
-            retorno += "Nome: " + produto.getNome() + " - Preço - R$ " + produto.getPreco() + "\n";
-        }
-        return retorno;
+    public List<Produto> getProdutosEstocados() {
+        return produtosEstocados;
+    }
+
+    public List<Produto> mostraOrdemAlfabetica(){
+        produtosEstocados.sort( (p1, p2) -> p1.getNome().compareTo(p2.getNome()));
+        return produtosEstocados;
+    }
+
+    public List<Produto> mostraPorPreco(){
+        produtosEstocados.sort( (produto1, produto2) -> Double.compare(produto1.getPreco(), produto2.getPreco()));
+        return produtosEstocados;
     }
 }

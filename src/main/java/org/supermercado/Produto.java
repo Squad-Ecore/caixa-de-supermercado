@@ -1,6 +1,6 @@
 package org.supermercado;
 
-public class Produto {
+public class Produto extends Object {
 
     protected int quantidadePorProdutoNoCarrinho;
     private int idProduto;
@@ -19,10 +19,6 @@ public class Produto {
         this.preco = preco;
         Produto.total = getTotal() + 1;
         this.idProduto = Produto.total;
-    }
-
-    public int getQuantidadePorProdutoNoCarrinho() {
-        return this.quantidadePorProdutoNoCarrinho;
     }
 
     public double getPreco() {
@@ -63,5 +59,20 @@ public class Produto {
 
     public int getIdProduto() {
         return idProduto;
+    }
+
+    public int getQuantidadePorProdutoNoCarrinho() {
+        return quantidadePorProdutoNoCarrinho;
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: " + nome + "\n" +
+                "IdProduto: " + idProduto + "\n" +
+                "CodigoDeBarras: " + codigoDeBarras + "\n" +
+                "Preco: R$ " + preco + "\n" +
+                "DataDeValidade: " + dataDeValidade + "\n" +
+                "QuantidadeEmEstoque: " + quantidadeEmEstoque + "\n" +
+                "-----------------------------------------" + "\n";
     }
 }

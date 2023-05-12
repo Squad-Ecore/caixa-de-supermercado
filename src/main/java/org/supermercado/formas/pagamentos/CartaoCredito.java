@@ -1,70 +1,33 @@
 package org.supermercado.formas.pagamentos;
 
 import org.supermercado.Carrinho;
-import org.supermercado.FormaDePagamento;
-import org.supermercado.Produto;
 import org.supermercado.Recibo;
+import org.supermercado.RealizaVerificaPagamento;
 import org.supermercado.dadossupermercado.DadosSupermercado;
 
-import java.util.ArrayList;
 import java.util.Date;
 
-public class CartaoCredito extends Recibo implements FormaDePagamento {
+public class CartaoCredito extends RealizaVerificaPagamento implements Recibo {
     private String numeroDoCartao;
     private String nomeDoTitular;
-    private String dataDeValidade;
-    private String codigoDeSeguranca;
-    private String listaProdutosComprado;
 
-    public CartaoCredito(String numeroDoCartao, String nomeDoTitular, String dataDeValidade, String codigoDeSeguranca) {
+    public CartaoCredito(String numeroDoCartao, String nomeDoTitular, double saldo, Carrinho carrinho) {
         this.numeroDoCartao = numeroDoCartao;
         this.nomeDoTitular = nomeDoTitular;
-        this.dataDeValidade = dataDeValidade;
-        this.codigoDeSeguranca = codigoDeSeguranca;
-
+        super.saldo = saldo;
+        super.carrinho = carrinho;
     }
 
     @Override
-    public boolean realizaPagamento() {
+    public String geraRecibo() {
+        if (super.verificaPagamento())
+            return "\n\n\n##############################\n\nRECIBO DE PAGAMENTO\nSupermercado " +
+                    DadosSupermercado.getNomeSupermercado() + "\nCNPJ: " + DadosSupermercado.getCnpj() + "\n\nLista de Compras\n" +
+                    carrinho.getListaAtualDeProdutos() + "\nCartão de Crédito - " + numeroDoCartao + "\nTitular: " + nomeDoTitular +
+                    "\nValor Total da Compra: R$ " + carrinho.getValorTotalCompra() + "\nData e Hora da Compra: " +
+                    new Date() + "\n\nOBRIGADO PELA PREFERÊNCIA!\n\n##############################";
 
-        ArrayList<Produto> listaDeProdutos = (ArrayList<Produto>) Carrinho.getListaProdutos();
-        String listaProdutosComprado = "";
-
-        for (Produto produto : listaDeProdutos) {
-            super.valorTotal += produto.getQuantidadePorProdutoNoCarrinho() * produto.getPreco();
-            listaProdutosComprado += produto.getQuantidadePorProdutoNoCarrinho() + " " + produto.getNome() + " - R$ " + produto.getPreco() + " cada\n";
-            this.listaProdutosComprado = listaProdutosComprado;
-        }
-
-        System.out.println("Processando pagamento de R$ " + super.getValorTotal() + " com cartão " + numeroDoCartao);
-        System.out.println("Autorizando transação...");
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Transação aprovada!");
-        return true;
+        return "Saldo Insuficiente para realizar pagamento";
     }
 
-    @Override
-    public boolean verificaPagamento() {
-        System.out.println("Pagamento por cartão aprovado!!!!!!!!!!!!!!!");
-        return true;
-    }
-
-    @Override
-    public String geraRecibo(Carrinho carrinho) {
-        String retorno =
-                "\n\n\n##############################\n\nRECIBO DE PAGAMENTO\nSupermercado " +
-                        DadosSupermercado.getNomeSupermercado() + "\nCNPJ: " + DadosSupermercado.getCnpj() + "\n\nLista de Compras\n";
-
-        setDataHora(new Date());
-        retorno += listaProdutosComprado;
-        setDataHora(new Date());
-        retorno += "\nCartão de Crédito - " + numeroDoCartao + "\nTitular: " + nomeDoTitular;
-        retorno += "\nValor Total da Compra: R$ " + getValorTotal() + "\nData e Hora da Compra: " +
-                getDataHora() + "\n\nOBRIGADO PELA PREFERÊNCIA!\n\n##############################";
-        return retorno;
-    }
 }
