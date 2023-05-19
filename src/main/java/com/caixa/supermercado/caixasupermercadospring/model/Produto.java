@@ -13,7 +13,7 @@ public class Produto {
     private String codigoDeBarras;
     private int quantidadeEmEstoque;
     private double preco;
-    private LocalDate dataDeValidade;
+    private String dataDeValidade;
 
     @ManyToOne
     private Categoria categoria;
@@ -21,14 +21,15 @@ public class Produto {
     public Produto() {
     }
 
-    public Produto(String nome, int quantidadeEmEstoque, double preco, Categoria categoria) {
+    public Produto(String nome, int quantidadeEmEstoque, double preco, Categoria categoria, String dataDeValidade) {
         this.nome = nome;
         this.quantidadeEmEstoque = quantidadeEmEstoque;
         this.preco = preco;
         this.categoria = categoria;
+        this.dataDeValidade = dataDeValidade;
     }
 
-    public LocalDate getDataDeValidade() {
+    public String getDataDeValidade() {
         return dataDeValidade;
     }
 
@@ -76,7 +77,7 @@ public class Produto {
         return id;
     }
 
-    public void setDataDeValidade(LocalDate dataDeValidade) {
+    public void setDataDeValidade(String dataDeValidade) {
         this.dataDeValidade = dataDeValidade;
     }
 

@@ -60,7 +60,7 @@ public class ProdutoController {
     public ResponseEntity<ProdutoDto> atualizarProduto(@PathVariable("id") Long id, @RequestBody @Valid AtualizaProdutoForm form){
         Optional<Produto> optional = produtoRepository.findById(id);
         if (optional.isPresent()){
-            Produto produto = form.atualizaProduto(id, produtoRepository, form);
+            Produto produto = form.atualizaProduto(id, produtoRepository);
             return ResponseEntity.ok(new ProdutoDto(produto));
         }
         return ResponseEntity.notFound().build();

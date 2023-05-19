@@ -10,7 +10,7 @@ public class ProdutoDto {
     private String nome;
     private double preco;
     private int quantidadeEmEstoque;
-    private LocalDate dataDeValidade;
+    private String dataDeValidade;
 
     public ProdutoDto(Produto produto) {
         this.nome = produto.getNome();
@@ -31,7 +31,7 @@ public class ProdutoDto {
         return quantidadeEmEstoque;
     }
 
-    public LocalDate getDataDeValidade() {
+    public String getDataDeValidade() {
         return dataDeValidade;
     }
 

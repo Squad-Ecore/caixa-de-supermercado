@@ -51,9 +51,9 @@ public class AtualizaProdutoForm {
     @NotNull @NotEmpty
     private String codigoDeBarras;
 
-    public Produto atualizaProduto(Long id, ProdutoRepository produtoRepository, AtualizaProdutoForm form) {
+    public Produto atualizaProduto(Long id, ProdutoRepository produtoRepository) {
         Produto produto = produtoRepository.getReferenceById(id);
-        produto.setNome(form.getNome());
+        produto.setNome(nome);
         produto.setPreco(preco);
         produto.setQuantidadeEmEstoque(quantidadeEmEstoque);
         produto.setCodigoDeBarras(codigoDeBarras);

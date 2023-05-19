@@ -18,6 +18,16 @@ public class ProdutoForm {
     private String codigoDeBarras;
     @NotNull @NotEmpty
     private String nomeCategoria;
+    @NotNull @NotEmpty
+    private String dataDeValidade;
+
+    public String getDataDeValidade() {
+        return dataDeValidade;
+    }
+
+    public void setDataDeValidade(String dataDeValidade) {
+        this.dataDeValidade = dataDeValidade;
+    }
 
     public String getNomeCategoria() {
         return nomeCategoria;
@@ -60,6 +70,6 @@ public class ProdutoForm {
     }
 
     public Produto conversor(CategoriaRepository categoria){
-        return new Produto(nome, quantidadeEmEstoque, preco, categoria.findByNome(nomeCategoria));
+        return new Produto(nome, quantidadeEmEstoque, preco, categoria.findByNome(nomeCategoria), dataDeValidade);
     }
 }
