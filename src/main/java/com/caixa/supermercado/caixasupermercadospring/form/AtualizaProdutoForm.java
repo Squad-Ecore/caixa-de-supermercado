@@ -15,6 +15,18 @@ public class AtualizaProdutoForm {
     private double preco;
     @NotNull
     private int quantidadeEmEstoque;
+    @NotNull @NotEmpty
+    private String codigoDeBarras;
+    @NotNull @NotEmpty
+    private String dataDeValidade;
+
+    public String getDataDeValidade() {
+        return dataDeValidade;
+    }
+
+    public void setDataDeValidade(String dataDeValidade) {
+        this.dataDeValidade = dataDeValidade;
+    }
 
     public String getNome() {
         return nome;
@@ -48,15 +60,13 @@ public class AtualizaProdutoForm {
         this.codigoDeBarras = codigoDeBarras;
     }
 
-    @NotNull @NotEmpty
-    private String codigoDeBarras;
-
     public Produto atualizaProduto(Long id, ProdutoRepository produtoRepository) {
         Produto produto = produtoRepository.getReferenceById(id);
         produto.setNome(nome);
         produto.setPreco(preco);
         produto.setQuantidadeEmEstoque(quantidadeEmEstoque);
         produto.setCodigoDeBarras(codigoDeBarras);
+        produto.setDataDeValidade(dataDeValidade);
         return produto;
     }
 }
